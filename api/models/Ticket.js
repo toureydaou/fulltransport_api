@@ -7,7 +7,7 @@ const Voyage = require("./Voyage");
 const Paiement = require("./Paiement");
 
 const Ticket = sequelize.define(
-  "ticket",
+  "tickets",
   {
     id: {
       autoIncrement: true,

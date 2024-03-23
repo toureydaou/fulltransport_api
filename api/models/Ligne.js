@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../database");
 
 const Ligne = sequelize.define(
-  "ligne",
+  "lignes",
   {
     id: {
       autoIncrement: true,

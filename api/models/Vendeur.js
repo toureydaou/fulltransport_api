@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../database");
 
 const Vendeur = sequelize.define(
-  "Vendeur",
+  "vendeurs",
   {
     id: {
       autoIncrement: true,

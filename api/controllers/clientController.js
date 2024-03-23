@@ -34,19 +34,14 @@ const getClientbyId = async (req, res) => {
 
 const getClientbyName = async (req, res) => {
   try {
+    const { nom, prenom, contact } = req.query;
+    const condition = {};
+    nom && (condition.nom = { [Op.like]: `%${nom}%` });
+    prenom && (condition.prenom = { [Op.like]: `%${prenom}%` });
+    contact && (condition.contact = { [Op.like]: `%${contact}%` });
     await Client.findAll({
       where: {
-        [Op.or]: {
-          nom: {
-            [Op.like]: req.query.nom ? `%${req.query.nom}%` : "%%",
-          },
-          prenom: {
-            [Op.like]: req.query.prenom ? `%${req.query.prenom}%` : "%%",
-          },
-          contact: {
-            [Op.like]: req.query.contact ? `%${req.query.contact}%` : "%%",
-          },
-        },
+        [Op.or]: condition,
       },
     })
       .then((response) => {

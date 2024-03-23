@@ -20,9 +20,4 @@ const sequelize = new Sequelize(
   }
 );
 
-(async () => {
-  await sequelize.sync({ alter: true });
-  console.log("Database initialized !");
-})();
-
 module.exports = sequelize;

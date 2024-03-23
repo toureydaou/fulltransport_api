@@ -3,7 +3,7 @@ const sequelize = require("../database");
 const Ligne = require("./Ligne");
 
 const Arret = sequelize.define(
-  "arret",
+  "arrets",
   {
     id: {
       autoIncrement: true,

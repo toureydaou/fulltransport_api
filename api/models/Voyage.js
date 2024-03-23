@@ -4,7 +4,7 @@ const Bus = require("./Bus");
 const Ligne = require("./Ligne");
 
 const Voyage = sequelize.define(
-  "voyage",
+  "voyages",
   {
     id: {
       autoIncrement: true,

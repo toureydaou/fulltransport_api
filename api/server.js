@@ -1,5 +1,4 @@
 const { API_PORT } = require("./config");
-
 const express = require("express");
 
 const app = express();
